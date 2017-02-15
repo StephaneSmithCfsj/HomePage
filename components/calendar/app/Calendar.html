@@ -1,0 +1,76 @@
+﻿<div class="Calendar" ng-controller="CalendarController as calendar" ng-cloak>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" ng-href="{{calendar.siteUrl}}/SiteAssets/Negotium/bower_components/angular-material/angular-material.min.css" />
+    <link rel="stylesheet" type="text/css" ng-href="{{calendar.siteUrl}}/SiteAssets/Negotium/Boost/Calendar/Calendar.css" />
+    <header layout="column">
+        <h2 class="md-headline">Aujourd'hui pour [...]</h2>
+        <div class="datePickerCont">
+            <md-datepicker ng-model="calendar.pickerDate" ng-change="calendar.LoadDateEvents()" md-placeholder="Enter date" class="datePicker"></md-datepicker>
+        </div>
+    </header>
+    <md-content>
+        <section class="content">
+            <!-- Sticky events: All day Events-->
+            <md-list class="md-dense md-subheader" layout-padding ng-if="calendar.allDayEvents.length > 0">
+                <md-list-item class="md-3-line" ng-repeat="allDayEvent in calendar.allDayEvents | filter:calendar.Department:strict">
+                    <span class="md-avatar  {{allDayEvent.DepartmentLabel}}" layout="column" layout-align="center center">--</span>
+                    <div layout="column" class="md-list-item-text">
+                        <strong ng-click="calendar.OpenRightSideNav(allDayEvent)">{{allDayEvent.Title}}</strong></a>
+                        <span class="calDesc">{{allDayEvent.Description | truncate:true:100:'...'}}</span>
+                        <span class="calLoc"><i class="material-icons">&#xE84F;</i> {{allDayEvent.Location}}</span>
+                    </div>
+                    <md-divider ng-if="!$last"></md-divider>
+                </md-list-item>
+            </md-list>
+
+            <md-list layout-padding>
+                <md-list-item class="md-3-line" ng-repeat="event in calendar.timedEvents | orderBy:'EventDate' | filter:calendar.Department:strict">
+                    <span class="md-avatar {{event.DepartmentLabel}}" layout="column" layout-align="center center">{{event.EventDate | amDateFormat:'HH:mm'}}</span>
+                    <div layout="column" class="md-list-item-text">
+                        <strong ng-click="calendar.OpenRightSideNav(event)">{{event.Title}}</strong>
+                        <span class="calDesc">{{event.Description | truncate:true:100:'...'}}</span>
+                        <span class="calLoc"><i class="material-icons">&#xE84F;</i> {{event.Location}}</span>
+                    </div>
+                    <md-divider ng-if="!$last"></md-divider>
+                </md-list-item>
+            </md-list>
+        </section>
+    </md-content>
+
+    <md-sidenav md-component-id="Events-SideNav" class="md-sidenav-right md-whiteframe-z2">
+        <md-toolbar>
+            <div layout="row" layout-align="space-between center">
+                <div>
+                    <h2 class="md-toolbar-tools ">Évènement[...] </h2>
+                </div>
+                <div>
+                    <md-button ng-click="calendar.CloseRightSideNav()" class="md-primary">X</md-button>
+                </div>
+            </div>
+        </md-toolbar>
+        <md-content layout-padding>
+            <div>
+                <div ng-cloak layout="row" class="">
+                    <div>
+                        <strong>{{calendar.currentEvent.Title}}</strong>
+                        <div class="newsAbstract ">{{calendar.currentEvent.Description}}</div>
+                        <span class="calTime" ng-hide="calendar.currentEvent.AllDayEvent"><i class="material-icons">&#xE8AE;</i> {{calendar.currentEvent.EventDate | amDateFormat:'HH:mm'}}</span><br>
+                        <span class="calLoc"><i class="material-icons">&#xE84F;</i> {{calendar.currentEvent.Location}}</span>
+                    </div>
+                </div>
+            </div>
+            <div layout="row">
+                <div flex="50" layout="column" layout-align="center center">
+                    <md-button class="md-raised md-primary" ng-click="calendar.FetchPreviousEvent()">
+                        Évènement précédent
+                    </md-button>
+                </div>
+                <div flex="50" layout="column" layout-align="center center" ng-click="calendar.FetchNextEvent()">
+                    <md-button class="md-raised md-primary">
+                        Évènement suivant
+                    </md-button>
+                </div>
+            </div>
+        </md-content>
+    </md-sidenav>
+</div>

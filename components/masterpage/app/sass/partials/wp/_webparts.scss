@@ -1,0 +1,86 @@
+
+
+
+
+// ** WEBPARTS | WebPart Header 
+// ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.ms-webpart-chrome-title {
+	background-color:$colWPHeader;
+	// @include background(image-url("line.png"), linear-gradient(top, darken($color-brand, 10%) 0px, darken($color-brand, 10%) 5px, lighten(complement($color-brand), 10%) 5px, complement($color-brand) 100%));
+	@include border-top-radius(0);
+	// border-bottom:$WP-Title-border-width+px solid $WP-Title-border-color;
+	height: $WPTitleHeight;
+	margin-bottom:0;// attention au decalage entre la border-bottom et la bordure .ms-WPBorder si chrome est de type title and border et margin >=1
+
+	// Header container of selected webpart in edit mode
+	.ms-SPZone > .s4-wpActive &, 
+	.ms-rtestate-write > .ms-rte-wpbox > div > .s4-wpActive & {
+		background-color: $no-color;
+		border-bottom-width:0;
+		border-top:0;
+		color:$blanc;
+	}
+}
+
+
+// *** WEBPARTS |  WebPart Header | WP title and icon
+// ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.ms-webpart-titleText {
+	padding-left:$WPHeader-padding;
+	margin:0;
+
+	// For lists and libraries
+	.s4-wpcell &,
+	.s4-wpActive & {
+		padding-left:$WP-padding;
+	}
+
+	&.ms-webpart-titleText,
+	& > a {
+		@include font-custom1(300,2.16em);
+		color:$colMainBlue;
+		display:block;
+		line-height: $WPTitleHeight;
+	}
+
+	// in edit mode, the following class is added to the h2 tag of the title
+	&.ms-webpart-titleText-withMenu {
+		color:$colMainBlue;
+
+		// in edit mode, for a selected webpart
+		.ms-SPZone > .s4-wpActive &,
+		.ms-rtestate-write > .ms-rte-wpbox > div > .s4-wpActive & {color:$colMainBlue}
+
+	}
+
+	& > a:link,
+	& > a:visited,
+	& > a:hover {
+		/* [ReplaceColor(themeColor:"CommandLinksHover")] */ color:$colMainBlue;
+		text-decoration: none
+	}
+
+	& > a:active {
+		/* [ReplaceColor(themeColor:"CommandLinksPressed")] */ color:$colMainBlue;
+	}
+
+	/* Icon at the left of the title */
+	& > img {
+		// height:16px; // default value
+		// width:16px; // default value
+	}
+}
+
+// *** WEBPARTS |  WebPart Body
+// ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.ms-WPBody {
+	@include box-sizing(border-box);
+	background-color: $colWPBkg;
+
+	.placeholder-carousel & {
+		background-color: $no-color
+	}
+}

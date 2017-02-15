@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.1.1602.1, Culture=neutral, PublicKeyToken=3751622786b357c2" >
+
+  </pnp:Preferences>
+  <pnp:Templates ID="NEGOTIUM-CORPORATE_NEWS-FILES">
+    <pnp:ProvisioningTemplate ID="CORPORATE_NEWS-FILES" Version="1">
+      <pnp:Files>
+         <pnp:File Src="..\app\CorporateNews.html" Folder="{site}/SiteAssets/Negotium/Boost/CorporateNews" Overwrite="true" />
+         <pnp:File Src="..\app\CorporateNews.css" Folder="{site}/SiteAssets/Negotium/Boost/CorporateNews" Overwrite="true" />
+         <pnp:File Src="..\app\CorporateNews.js" Folder="{site}/SiteAssets/Negotium/Boost/CorporateNews" Overwrite="true" />
+         <pnp:File Src="..\app\CorporateNews.Controller.js" Folder="{site}/SiteAssets/Negotium/Boost/CorporateNews" Overwrite="true" />
+         <pnp:File Src="..\app\CorporateNews.Module.js" Folder="{site}/SiteAssets/Negotium/Boost/CorporateNews" Overwrite="true" />
+         <pnp:File Src="..\app\CorporateNews.Service.js" Folder="{site}/SiteAssets/Negotium/Boost/CorporateNews" Overwrite="true" />
+         <pnp:File Src="..\app\CorporateNews.Directive.js" Folder="{site}/SiteAssets/Negotium/Boost/CorporateNews" Overwrite="true" />
+		 
+
+         <pnp:File Src="..\negotium-corporatenews.webpart" Folder="{site}/_catalogs/wp" Overwrite="true">
+              <pnp:Properties>
+                <pnp:Property Key="Group" Value="Negotium" />
+              </pnp:Properties>
+         </pnp:File>
+
+         <!-- App Dependencies Files  -->
+         <pnp:File Src="..\..\..\bower\bower_components\lodash\dist\lodash.min.js" Folder="{site}/SiteAssets/Negotium/bower_components/lodash" Overwrite="true" />         
+         <pnp:File Src="..\..\..\bower\bower_components\moment\min\moment.min.js" Folder="{site}/SiteAssets/Negotium/bower_components/moment" Overwrite="true" />
+         <pnp:File Src="..\..\..\bower\bower_components\moment-timezone\builds\moment-timezone-with-data.min.js" Folder="{site}/SiteAssets/Negotium/bower_components/moment-timezone" Overwrite="true" />
+         <pnp:File Src="..\..\..\bower\bower_components\angular-moment\angular-moment.min.js" Folder="{site}/SiteAssets/Negotium/bower_components/angular-moment" Overwrite="true" />
+         <pnp:File Src="..\..\..\bower\bower_components\angular-animate\angular-animate.min.js" Folder="{site}/SiteAssets/Negotium/bower_components/angular-animate" Overwrite="true" />
+         <pnp:File Src="..\..\..\bower\bower_components\angular-aria\angular-aria.min.js" Folder="{site}/SiteAssets/Negotium/bower_components/angular-aria" Overwrite="true" />
+         <pnp:File Src="..\..\..\bower\bower_components\angular-material\angular-material.min.js" Folder="{site}/SiteAssets/Negotium/bower_components/angular-material" Overwrite="true" />
+         <pnp:File Src="..\..\..\bower\bower_components\angular-material\angular-material.min.css" Folder="{site}/SiteAssets/Negotium/bower_components/angular-material" Overwrite="true" />
+         <pnp:File Src="..\..\..\bower\bower_components\angular-messages\angular-messages.min.js" Folder="{site}/SiteAssets/Negotium/bower_components/angular-messages" Overwrite="true" />
+
+      </pnp:Files>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

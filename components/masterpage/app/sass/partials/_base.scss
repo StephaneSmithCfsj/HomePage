@@ -1,0 +1,54 @@
+// ====================================================================
+// The base styles for the project
+// ====================================================================
+html {
+    font-size:100%;
+}
+
+
+body {
+    font-size:75%;
+    font-family: arial;
+    line-height: 1.4;
+    // creates the tiled background to show off opacity
+    //@include background(image-url("line.png"));
+    //@include background(linear-gradient(top, #fff, #fefefe));
+    //@extend %font-sansation;
+    // Modernizr fallback for when there is no fontface support
+    .no-fontface & {
+        font-size: 1.05em;
+    }
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color:$color-link;
+
+    &:hover {
+      text-decoration: underline
+    }
+
+    &:visited {
+      color:$color-link;
+    }
+
+    img.ms-asset-icon.ms-rtePosition-4 {
+      display: none
+    }
+}
+
+::-moz-selection {
+    background: $colRsc;
+    text-shadow: none;
+}
+
+::selection {
+    background: $colRsc;
+    text-shadow: none;
+    color: $blanc
+}

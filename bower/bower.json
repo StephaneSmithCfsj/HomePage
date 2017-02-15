@@ -1,0 +1,29 @@
+{
+  "name": "Negotium Fort Saint Jean",
+  "description": "",
+  "main": "",
+  "license": "",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+	"handlebars": "^4.0.5",
+    "jquery": "^2.2.3",
+    "requirejs": "^2.2.0",
+    "lodash": "^4.12.0",
+    "angular-moment": "master",
+    "angular-material": "^1.0.8",
+    "moment-timezone": "^0.5.4",
+    "slick-carousel": "^1.6.0",
+    "angular-slick-carousel": "^3.1.5"
+  },
+  "resolutions": {
+    "angular": "1.5.5",
+    "angular-moment": "master"
+  }
+}

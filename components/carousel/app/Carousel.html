@@ -1,0 +1,18 @@
+<div class="Carousel" ng-controller="CarouselController as carousel" ng-cloak layout="row">
+  <link rel="stylesheet" type="text/css" ng-href="{{carousel.siteUrl}}/SiteAssets/Negotium/bower_components/angular-material/angular-material.min.css"/>
+  <link rel="stylesheet" type="text/css" ng-href="{{carousel.siteUrl}}/SiteAssets/Negotium/bower_components/slick-carousel/slick.css"/>
+  <link rel="stylesheet" type="text/css" ng-href="{{carousel.siteUrl}}/SiteAssets/Negotium/bower_components/slick-carousel/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" ng-href="{{carousel.siteUrl}}/SiteAssets/Negotium/Boost/Carousel/Carousel.css" />
+
+  <slick class="negotium-carousel" settings="slickConfig" dots="true" flex style="width:0px">
+    <div ng-repeat="item in carousel.news">
+       <img ng-src="{{item.Image}}" ng-style="{'width':'100%'}" alt="{{item.Title}}">
+       <div class="carousel-overlay {{item.Department}}" layout="column">
+         <strong>{{item.Title}}</strong>
+         <div>{{item.ArticleAbstract}}</div>
+       </div>
+    </div>
+  </slick>
+
+</div>
+

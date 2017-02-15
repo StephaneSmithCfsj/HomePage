@@ -1,0 +1,69 @@
+
+// * TOP NAV BAR LEVEL 1
+// ================================================================================================================================================ */
+
+.ms-core-listMenu-horizontalBox {
+	
+
+	> ul.root {
+		position: relative;
+
+		> li:first-child > .ms-core-listMenu-item > span {padding-left: 0}
+	}
+
+
+	li.static {// level 1
+
+		
+
+
+
+		> .ms-core-listMenu-item {
+			@include font-custom2(bold,1.66em);
+			border:1px solid $no-color;
+			
+			//line-height: 1.8;
+			padding:10px 0;
+			margin-right:0px;
+			text-decoration:none;
+			text-transform:uppercase;
+
+			&:link,
+			&:visited {
+				color:$color-link
+			}
+
+			&:hover {
+				//background:$color-link
+				text-decoration: underline
+			}
+
+			// Selected item - border
+			&.selected > span > span,
+			&:hover > span > span {
+				//padding-bottom: 10px;
+				//border-bottom:4px solid $color11;
+			}
+
+			> span {border-right:1px solid $no-color;display: inline-block;padding:0 15px}
+		}
+	}
+
+	// Selected
+	.ms-core-listMenu-selected {// root
+
+		&:link,
+		&:visited {
+			background-color:$no-color;
+			/* [ReplaceColor(themeColor:"NavigationAccent")] */ color:$color-link!important
+		}
+	}
+
+	.additional-background.dynamic-children {// item with drop down
+		padding-right:16px;
+		/* [RecolorImage(themeColor:"BodyText",method:"Filling")] */ //background-image:image-url("TopNav_DropDownArrow_8x8.png"); // icon of the arrowdrop down
+		background-repeat:no-repeat;
+		background-position:right center;
+		cursor:pointer
+	}
+}

@@ -1,0 +1,153 @@
+/**
+ * CFSJ - June, 2016
+ * @author Negotium Technologies
+ * Carousel
+ */
+/* line 4, ../../masterpage/app/sass/partials/_base.scss */
+html {
+  font-size: 100%;
+}
+
+/* line 9, ../../masterpage/app/sass/partials/_base.scss */
+body {
+  font-size: 75%;
+  font-family: arial;
+  line-height: 1.4;
+}
+/* line 18, ../../masterpage/app/sass/partials/_base.scss */
+.no-fontface body {
+  font-size: 1.05em;
+}
+
+/* line 23, ../../masterpage/app/sass/partials/_base.scss */
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 29, ../../masterpage/app/sass/partials/_base.scss */
+a {
+  color: #013a81;
+}
+/* line 32, ../../masterpage/app/sass/partials/_base.scss */
+a:hover {
+  text-decoration: underline;
+}
+/* line 36, ../../masterpage/app/sass/partials/_base.scss */
+a:visited {
+  color: #013a81;
+}
+/* line 40, ../../masterpage/app/sass/partials/_base.scss */
+a img.ms-asset-icon.ms-rtePosition-4 {
+  display: none;
+}
+
+/* line 45, ../../masterpage/app/sass/partials/_base.scss */
+::-moz-selection {
+  background: #FDB813;
+  text-shadow: none;
+}
+
+/* line 50, ../../masterpage/app/sass/partials/_base.scss */
+::selection {
+  background: #FDB813;
+  text-shadow: none;
+  color: #fff;
+}
+
+/* line 42, sass/Carousel.scss */
+.negotium-carousel {
+  background-color: #fbfbfb;
+}
+/* line 44, sass/Carousel.scss */
+.negotium-carousel .slick-slider {
+  background-color: #fbfbfb;
+}
+/* line 48, sass/Carousel.scss */
+.negotium-carousel strong {
+  font: normal 2em "Roboto", Arial, sans-serif;
+  text-shadow: none;
+  color: #fff;
+  margin: 0;
+}
+/* line 54, sass/Carousel.scss */
+.negotium-carousel .slick-prev {
+  left: 12px;
+}
+/* line 58, sass/Carousel.scss */
+.negotium-carousel .slick-next {
+  right: 12px;
+}
+/* line 62, sass/Carousel.scss */
+.negotium-carousel .slick-prev,
+.negotium-carousel .slick-next {
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  z-index: 2;
+}
+/* line 71, sass/Carousel.scss */
+.negotium-carousel .slick-prev:before,
+.negotium-carousel .slick-next:before {
+  font-size: 40px;
+  opacity: 0;
+}
+/* line 84, sass/Carousel.scss */
+.negotium-carousel:hover .slick-prev,
+.negotium-carousel:hover .slick-next {
+  opacity: 0.75;
+}
+/* line 88, sass/Carousel.scss */
+.negotium-carousel:hover .slick-prev:before,
+.negotium-carousel:hover .slick-next:before {
+  color: rgba(0, 0, 0, 0.75);
+  opacity: 1;
+}
+/* line 93, sass/Carousel.scss */
+.negotium-carousel:hover .slick-prev:hover,
+.negotium-carousel:hover .slick-next:hover {
+  color: black !important;
+  opacity: 1 !important;
+}
+/* line 100, sass/Carousel.scss */
+.negotium-carousel .carousel-overlay {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 150;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  width: 100%;
+  padding: 12px;
+}
+
+/* line 113, sass/Carousel.scss */
+.slick-slide {
+  position: relative;
+}
+
+/* line 121, sass/Carousel.scss */
+.slick-dots {
+  background-color: #fbfbfb;
+  bottom: -22px;
+  list-style-type: circle;
+  text-align: right;
+}
+/* line 124, sass/Carousel.scss */
+.slick-dots li {
+  margin: 0 2px;
+}
+
+/* Adjust the weight and height images*/
+.slick-slide img
+{
+    display: block;
+    width: 750px;
+     height: 350px;
+     object-fit: contain;
+} 

@@ -1,0 +1,216 @@
+@charset "UTF-8";
+/**
+ * CFSJ - June, 2016
+ * @author Negotium Technologies
+ * Calendar
+ */
+/* line 16, ../../masterpage/app/sass/partials/_placeholders.scss */
+.floatL {
+  float: left;
+}
+
+/* line 37, sass/calendar.scss */
+.Calendar,
+.content {
+  background-color: #fbfbfb;
+}
+
+/* line 42, sass/calendar.scss */
+.calLoc i , .calTime i {
+  font-size: 1.1666667em;
+  font-weight: 600;
+  position: relative;
+  top: 2px;
+}
+
+/* line 53, sass/calendar.scss */
+header {
+  background: #e6e6e6;
+}
+/* line 56, sass/calendar.scss */
+header h2.md-headline {
+  height: 52px;
+  line-height: 52px;
+}
+/* line 61, sass/calendar.scss */
+header .datePickerCont {
+  height: 56px;
+  text-align: center;
+}
+/* line 65, sass/calendar.scss */
+header md-datepicker {
+  background: #e6e6e6;
+}
+/* line 69, sass/calendar.scss */
+header .ms-webpart-titleText,
+header .md-headline {
+  color: #013a81;
+  margin: auto 15px;
+}
+
+/* line 76, sass/calendar.scss */
+.datePicker .md-datepicker-button {
+  padding-right: 20px;
+}
+/* line 79, sass/calendar.scss */
+.datePicker .md-datepicker-button:after {
+  color: #000;
+  content: "Activités du ";
+  left: 30px;
+  position: relative;
+  text-transform: none;
+  top: -24px;
+  width: 100px;
+}
+/* line 89, sass/calendar.scss */
+.datePicker .md-datepicker-button .md-datepicker-calendar-icon {
+  color: #000;
+}
+
+/* line 93, sass/calendar.scss */
+.md-datepicker-input {
+  font: bold 1.33em "Roboto", Arial, sans-serif;
+  text-shadow: none;
+}
+/* line 96, sass/calendar.scss */
+.md-datepicker-input-mask-opaque {
+  background: #e6e6e6 !important;
+}
+
+/* line 101, sass/calendar.scss */
+.md-calendar-day-header {
+  background: #e6e6e6;
+}
+/* line 104, sass/calendar.scss */
+.md-default-theme .md-calendar-day-header {
+  background: #e6e6e6;
+}
+
+/* line 111, sass/calendar.scss */
+md-content {
+  /*height: 600px;*/
+}
+
+/* line 118, sass/calendar.scss */
+.content > .layout-padding {
+  padding: 0;
+}
+/* line 122, sass/calendar.scss */
+.content md-list-item {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 12px;
+}
+/* line 126, sass/calendar.scss */
+.content md-list-item strong {
+  font: 500 1.16667em "Roboto", Arial, sans-serif;
+  text-shadow: none;
+}
+/* line 130, sass/calendar.scss */
+.content md-list-item strong,
+.content md-list-item .calLoc {
+  color: #000;
+}
+/* line 135, sass/calendar.scss */
+.content md-list-item .calDesc {
+  color: #333;
+}
+/* line 138, sass/calendar.scss */
+.content md-list-item .md-avatar {
+  color: #fff;
+  background-color: #666;
+}
+/* line 141, sass/calendar.scss */
+.content md-list-item .md-avatar.Batiments {
+  background-color: #c3161c;
+}
+/* line 144, sass/calendar.scss */
+.content md-list-item .md-avatar.Corporation {
+  background-color: #6370a5;
+}
+/* line 147, sass/calendar.scss */
+.content md-list-item .md-avatar.Environnement {
+  background-color: #858e11;
+}
+/* line 150, sass/calendar.scss */
+.content md-list-item .md-avatar.Evenements {
+  background-color: #1a75bc;
+}
+/* line 153, sass/calendar.scss */
+.content md-list-item .md-avatar.Ressources {
+  background-color: #FDB813;
+}
+
+/* line 161, sass/calendar.scss */
+._md-subheader-wrapper:not(.md-sticky-no-effect)[sticky-state=active] {
+  margin-top: 0;
+}
+/* line 164, sass/calendar.scss */
+._md-subheader-wrapper:not(.md-sticky-no-effect)[sticky-state=active] strong {
+  font: normal 1.16em "Roboto", Arial, sans-serif;
+  text-shadow: none;
+}
+
+/* line 170, sass/calendar.scss */
+.md-subheader {
+  background-color: #f2f2f2;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1em;
+}
+/* line 175, sass/calendar.scss */
+.md-subheader ._md-subheader-inner {
+  padding: 0;
+}
+/* line 180, sass/calendar.scss */
+.md-subheader md-list-item._md-no-proxy {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 12px;
+}
+/* line 184, sass/calendar.scss */
+.md-subheader md-list-item._md-no-proxy .md-avatar {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background-color: #FDB813;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+}
+/* line 196, sass/calendar.scss */
+.md-subheader .md-dense.layout-padding {
+  padding: 0;
+}
+
+
+/*  Right slider (md-sidenav) */
+.Calendar md-content md-list-item strong
+{
+	cursor:pointer;
+}
+
+.Calendar md-sidenav{
+	width:400px;
+}
+
+.Calendar md-sidenav, md-backdrop {
+position: fixed !important;
+}
+
+.Calendar md-sidenav md-toolbar .md-button
+{
+	color: #013A81 !important;
+}
+.Calendar md-sidenav md-content img
+{
+	width:100%
+}
+
+.Calendar md-sidenav md-content .md-button
+{
+	font-size:x-small;
+	line-height: 20px;
+}
+

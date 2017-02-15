@@ -1,0 +1,198 @@
+/* TOC - DESKTOP | Controls | Search
+---------------------------------------------------
+* SEARCH BORDER
+* SEARCH INPUT
+* DROP DOWN
+	** Button Arrow
+	** Drop down list
+* SEARCH ICON
+
+*/
+
+
+// * SEARCH BORDER
+// ================================================================================================================================================ */
+
+.searchCont .ms-WPBody {
+	background-color: $no-color
+}
+
+#searchInputBox {
+	//margin:0 20px;
+	//padding-top:10px
+}
+
+.ms-srch-sb-border {
+	@include border-radius(0);
+	background-color:$blanc;
+	border:2px solid $midDarkGray;
+	height:50px;
+	margin:25px 20px 0 0;
+	width:360px;
+
+	&:hover {
+		border:2px solid $midDarkGray;
+	}
+
+	// Focus
+	&Focused {
+		@include border-radius(0);
+		background-color:$blanc;
+		border:2px solid $midDarkGray;
+		height:50px;
+		margin:25px 20px 0 0;
+		width:360px
+	}
+}
+
+
+// * SEARCH INPUT
+// ================================================================================================================================================ */
+
+.ms-srch-sb > input {
+	@include font-custom1(normal,1.16em);
+	background-color:$blanc;
+	color:$DarkGray;
+	height:46px;
+	margin:0 0 0 15px;
+	//padding:2px 1px 0 10px;
+	width:285px;
+
+	&:focus {
+		border-style:none;
+		color:$DarkGray;
+		outline-style:none;
+	}
+}
+
+
+// * DROP DOWN
+// ================================================================================================================================================ */
+
+
+// ** DROP DOWN | Arrow before search icon
+// ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.ms-srch-sb-navLink,
+.ms-srch-sb-searchLink {
+	display:inline-block;
+	cursor:pointer;
+	vertical-align:top;
+	background-color:transparent;
+	border:1px solid transparent;
+	position:relative;
+	top:12px;
+	overflow:hidden;
+
+	&:hover {
+		/* [ReplaceColor(themeColor:"ButtonHoverBackground",opacity:"1")] */ background-color:$colWPHeader;
+		/* [ReplaceColor(themeColor:"ButtonHoverBackground")] */ background-color:$colWPHeader;
+	}
+
+	&:active,
+	> img:active,
+	&.ms-srch-sb-navLink-menuOpen,
+	&.ms-srch-sb-navLink-menuOpen:hover	{
+		/* [ReplaceColor(themeColor:"ButtonPressedBackground",opacity:"1")] */ background-color:$colWPHeader;
+		/* [ReplaceColor(themeColor:"ButtonPressedBackground")] */ background-color:$colWPHeader;
+	}
+}
+
+
+// ** DROP DOWN | Drop Down list
+// ------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.ms-qSuggest-container {
+	background-color:$blanc;
+	@include border-radius(0px);
+	@include box-shadow(rgba($colWPHeader,0.47) 0 0 7px 0);
+	margin:-1px 0 0 -1px;
+	padding:5px 0
+}
+
+.ms-qSuggest-list {
+	@extend %mp0
+}
+
+// Drop down items
+
+.ms-qSuggest-listItem {
+	margin:0;
+	padding:7px 10px
+}
+
+// Drop down items hover
+
+.ms-qSuggest-hListItem {
+	/* [ReplaceColor(themeColor:"HoverBackground",opacity:"1")] */ background-color:$colWPHeader;
+	/* [ReplaceColor(themeColor:"HoverBackground")] */ background-color:rgba($colWPHeader,0.5 )
+}
+
+
+
+// * SEARCH ICON
+// ================================================================================================================================================ */
+
+
+@if $Default-SP-search-icon == true {
+	.ms-srch-sb {
+
+		// drop down icon container
+		> .ms-srch-sb-navLink {
+			height:20px;
+			width:20px
+		}
+
+		// search icon container
+		> .ms-srch-sb-searchLink {
+			margin-left:-1px;
+			height:20px;
+			width:20px;
+		}
+
+	}
+}
+
+@else {
+	.ms-srch-sb {
+		> a.ms-srch-sb-searchLink {
+			background:$no-color image-url('searchIcon_25X25.png') no-repeat 0 -3px;
+
+			//background: image-url('searchIcon_25X25.png');
+			//background-image: url('svg/searchIcon.svg'), none;
+			background-size: 25px 25px;
+			margin-top:0;
+			height:25px;
+			width:25px;
+
+			> img {
+				visibility: hidden
+			}
+		}
+	}
+}
+
+
+
+.ms-srch-sb-searchImg {
+	left:-35px;
+	top:-57px;
+	position:absolute;
+
+	&:hover {
+		left:-1px;
+		top:-69px
+	}
+}
+
+.ms-srch-sb-navImg {
+	left:-35px;
+	top:-35px;
+	position:absolute;
+
+	&:hover,
+	.ms-srch-sb-navLink-menuOpen > & {
+		left:-57px;
+		top:-35px
+	}
+}

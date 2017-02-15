@@ -1,0 +1,31 @@
+// ====================================================================
+// Any non-Compass mixins used in the project
+// ====================================================================
+
+
+// Mixin for Apps
+// ====================================================================
+
+@mixin appHeader($appHeadHeight) {
+	@include box-sizing(border-box);
+	height:$appHeadHeight;
+	min-height:$appHeadHeight;
+}
+
+// Mixin for project fonts
+// ====================================================================
+
+@mixin font-custom1($cFweight,$cFsize) {
+	font:$cFweight $cFsize "Roboto", Arial, sans-serif;
+	text-shadow:none;
+}
+
+@mixin font-custom2($cFweight,$cFsize) {
+	font:$cFweight $cFsize "Roboto Condensed", Arial, sans-serif;
+	text-shadow:none;
+}
+
+@mixin font-normal1($cFweight,$cFsize) {
+	font:$cFweight $cFsize Arial, sans-serif;
+	text-shadow:none;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.1.1602.1, Culture=neutral, PublicKeyToken=3751622786b357c2" >
+
+  </pnp:Preferences>
+  <pnp:Templates ID="NEGOTIUM-MASTERPAGE-FILES">
+    <pnp:ProvisioningTemplate ID="MASTERPAGE-FILES" Version="1">
+      <pnp:Files>
+         <!-- App Files  -->
+        <pnp:File Src="..\app\assets\app.css" Folder="{site}/_catalogs/masterpage/FSJ/assets" Overwrite="true" />
+        <pnp:File Src="..\app\assets\app.js" Folder="{site}/_catalogs/masterpage/FSJ/assets" Overwrite="true" />
+        <pnp:File Src="..\app\assets\app.controller.js" Folder="{site}/_catalogs/masterpage/FSJ/assets" Overwrite="true" />
+        <pnp:File Src="..\app\assets\images\favicon.ico" Folder="{site}/_catalogs/masterpage/FSJ/assets/images" Overwrite="true" />
+        <pnp:File Src="..\app\assets\images\logo.png" Folder="{site}/_catalogs/masterpage/FSJ/assets/images" Overwrite="true" />
+        <pnp:File Src="..\app\assets\images\logoCFSJ.png" Folder="{site}/_catalogs/masterpage/FSJ/assets/images" Overwrite="true" />
+        <pnp:File Src="..\app\assets\images\searchIcon_25X25.png" Folder="{site}/_catalogs/masterpage/FSJ/assets/images" Overwrite="true" />
+        <pnp:File Src="..\app\assets\images\fsg-logo.png" Folder="{site}/_catalogs/masterpage/FSJ/assets/images" Overwrite="true" />
+
+         <!-- App Dependencies Files  -->
+         <pnp:File Src="..\..\..\bower\bower_components\angular-material\angular-material.min.css" Folder="{site}/SiteAssets/Negotium/bower_components/angular-material" Overwrite="true" />
+         <pnp:File Src="..\..\..\bower\bower_components\angular-material\angular-material.min.js" Folder="{site}/SiteAssets/Negotium/bower_components/angular-material" Overwrite="true" />        
+         <pnp:File Src="..\..\..\bower\bower_components\angular-aria\angular-aria.min.js" Folder="{site}/SiteAssets/Negotium/bower_components/angular-aria" Overwrite="true" />
+         <pnp:File Src="..\..\..\bower\bower_components\angular-animate\angular-animate.min.js" Folder="{site}/SiteAssets/Negotium/bower_components/angular-animate" Overwrite="true" />
+               
+      </pnp:Files>     
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

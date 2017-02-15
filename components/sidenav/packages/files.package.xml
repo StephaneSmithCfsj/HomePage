@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2015/12/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.1.1602.1, Culture=neutral, PublicKeyToken=3751622786b357c2" />
+  <pnp:Templates ID="NEGOTIUM-SIDENAV-FILES">
+    <pnp:ProvisioningTemplate ID="SIDENAV-FILES" Version="1">
+      <pnp:Files>
+        <pnp:File Src="..\app\startup.js" Folder="SiteAssets/Negotium/Boost/SideNavigation/" Overwrite="true" />
+        <pnp:File Src="..\app\templates\sidenav.html" Folder="SiteAssets/Negotium/Boost/SideNavigation/templates" Overwrite="true" />
+        
+        <pnp:File Src="..\..\..\bower\bower_components\handlebars\handlebars.min.js" Folder="SiteAssets/Negotium/bower_components/handlebars" Overwrite="true" />
+        <pnp:File Src="..\..\..\bower\bower_components\jquery\dist\jquery.min.js" Folder="SiteAssets/Negotium/bower_components/jquery/dist" Overwrite="true" />
+        <pnp:File Src="..\..\..\bower\bower_components\requirejs\require.js" Folder="SiteAssets/Negotium/bower_components/requirejs" Overwrite="true" />
+        <pnp:File Src="..\..\..\bower\bower_components\angular-animate\angular-animate.min.js" Folder="SiteAssets/Negotium/bower_components/angular-animate" Overwrite="true" />
+
+
+        <pnp:File Src="..\app\assets\Images\btnBatiment.png" Folder="SiteAssets/Images/SideNav" Overwrite="true" />
+        <pnp:File Src="..\app\assets\Images\btnNews.png" Folder="SiteAssets/Images/SideNav" Overwrite="true" />
+        <pnp:File Src="..\app\assets\Images\btnCorpo.png" Folder="SiteAssets/Images/SideNav" Overwrite="true" />
+        <pnp:File Src="..\app\assets\Images\btnEnvironnement.png" Folder="SiteAssets/Images/SideNav" Overwrite="true" />
+        <pnp:File Src="..\app\assets\Images\btnRessources.png" Folder="SiteAssets/Images/SideNav" Overwrite="true" />
+        <pnp:File Src="..\app\assets\Images\btnCalendar.png" Folder="SiteAssets/Images/SideNav" Overwrite="true" />
+        <pnp:File Src="..\app\assets\Images\btnContacts.png" Folder="SiteAssets/Images/SideNav" Overwrite="true" />
+        <pnp:File Src="..\app\assets\Images\btnRooms.png" Folder="SiteAssets/Images/SideNav" Overwrite="true" />
+        <pnp:File Src="..\app\assets\Images\btnSearch.png" Folder="SiteAssets/Images/SideNav" Overwrite="true" />
+      </pnp:Files>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

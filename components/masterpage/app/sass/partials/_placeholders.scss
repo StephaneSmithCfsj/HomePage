@@ -1,0 +1,118 @@
+// ====================================================================
+// Placeholder styles - these only get generated into the CSS if they are extended elsewhere
+// For example: @extend %clearfix;
+// ====================================================================
+
+%clearfix {
+	@include clearfix;
+}
+%remove-margin-top {
+	margin-top: 0;
+}
+%single-transition {
+	@include single-transition(all, .3s, ease-in-out, 0s);
+}
+
+.floatL,
+%fl {
+	float: left;
+}
+%fr {
+	float: right;
+}
+%fn {
+	float: none;
+}
+%block {
+	display: block;
+}
+%iblock {
+	display: inline-block;
+}
+%hide {
+	display: none;
+}
+
+%imgL {
+	float:left;
+	margin:4px 10px 4px 0
+}
+
+%imgR {
+	float:right;
+	margin:4px 0 4px 10px
+}
+
+%margin0 {
+	margin: 0;
+}
+%headline-text-shadow {
+	@include single-text-shadow;
+}
+%rounded {
+	@include border-radius;
+}
+%round-tr {
+	@include border-top-right-radius(5px);
+}
+%round-br {
+	@include border-bottom-right-radius(5px);
+}
+%round-bl {
+	@include border-bottom-left-radius(5px);
+}
+%round-tl {
+	@include border-top-left-radius(5px);
+}
+%round-top {
+	@include border-top-radius(5px); // top left and top right
+}
+%round-right {
+	@include border-right-radius(5px); // top right and bottom right
+}
+%round-bottom {
+	@include border-bottom-radius(5px); // bottom right and bottom left
+}
+%round-left {
+	@include border-left-radius(5px); // bottom left and bottom right
+}
+%pos-rel {
+	position: relative;
+}
+%pos-abs {
+	position: absolute;
+}
+%w20p {
+	width:20%
+}
+%w40p {
+	width:40%
+}
+%w30p {
+	width:30%
+}
+%w33p {
+	width:33%
+}
+%w40p {
+	width:40%
+}
+%w50p {
+	width:50%
+}
+%w66p {
+	width:66%
+}
+%w70p {
+	width:70%
+}
+%w100p {
+	width:100%
+}
+%mp0 {
+	margin:0;
+	padding:0;
+}
+%alignC {
+	text-align:center;
+}

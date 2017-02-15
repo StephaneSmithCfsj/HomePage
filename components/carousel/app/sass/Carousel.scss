@@ -1,0 +1,127 @@
+/**
+ * CFSJ - June, 2016
+ * @author Negotium Technologies
+ * Carousel
+ */
+
+// ====================================================================
+// ====================================================================
+// =========================== IMPORTS ================================
+// ====================================================================
+// ====================================================================
+
+
+
+// Framework
+// ====================================================================
+
+@import "compass";
+
+
+// Default
+// ====================================================================
+
+@import "../../../masterpage/app/sass/partials/variables";
+@import "../../../masterpage/app/sass/partials/base";
+@import "../../../masterpage/app/sass/partials/mixins";
+@import "../../../masterpage/app/sass/partials/fonts";
+
+
+
+
+// ====================================================================
+// ====================================================================
+// =========================== COMMUN =================================
+// ====================================================================
+// ====================================================================
+
+
+// Slick update
+// ====================================================================
+
+.negotium-carousel {
+  background-color: $colWPBkg;
+  .slick-slider {
+    background-color: $colWPBkg;
+  }
+
+  strong {
+    @include font-custom1(normal,2em);
+    color:$blanc;
+    margin: 0
+  }
+
+  .slick-prev {
+    left:12px
+  }
+
+  .slick-next {
+    right:12px
+  }
+
+  .slick-prev,
+  .slick-next {
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    z-index:2;
+
+
+    &:before {
+      font-size: 40px;
+      opacity: 0;
+
+      //    &:focus,
+      //    &:hover {
+      //      color:rgba($blanc,.75);
+      //    }
+    }
+  }
+
+
+  &:hover {
+    .slick-prev,
+    .slick-next {
+      //color:rgba($blanc,.75);
+      opacity: 0.75;
+      &:before {
+        color:rgba($noir,.75);
+        opacity: 1;
+      }
+
+              &:hover {
+          color:rgba($noir,1)!important;
+          opacity: 1!important
+        }
+    }
+  }
+
+  .carousel-overlay{
+    @include box-sizing(border-box);
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index: 150;
+    background:rgba($noir,0.75);
+    color:$blanc;
+    width:100%;
+    padding: 12px
+  }
+}
+
+.slick-slide{
+  position: relative;
+
+  img {
+    //max-height: 356px
+  }
+}
+
+.slick-dots {
+  background-color: $colWPBkg;
+  bottom: -22px;
+  li {
+    margin: 0 2px
+  } 
+}

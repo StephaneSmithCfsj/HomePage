@@ -1,0 +1,242 @@
+/**
+ * CFSJ - June, 2016
+ * @author Negotium Technologies
+ * Calendar
+ */
+
+// ====================================================================
+// ====================================================================
+// =========================== IMPORTS ================================
+// ====================================================================
+// ====================================================================
+
+
+
+// Framework
+// ====================================================================
+
+@import "compass";
+
+
+// Default
+// ====================================================================
+
+@import "../../../masterpage/app/sass/partials/variables";
+@import "../../../masterpage/app/sass/partials/placeholders";
+@import "../../../masterpage/app/sass/partials/mixins";
+@import "../../../masterpage/app/sass/partials/fonts";
+
+
+
+
+// ====================================================================
+// ====================================================================
+// =========================== COMMUN =================================
+// ====================================================================
+// ====================================================================
+.Calendar,
+.content {
+	background-color:$colWPBkg;
+}
+
+.calLoc i , .calTime i {
+	font-size: 1.1666667em;
+	font-weight: 600;
+	position: relative;
+	top: 2px
+}
+
+// Header
+// ================
+
+
+header {
+	background:$colWPHeader;
+
+	h2.md-headline {
+		height: $WPTitleHeight;
+		line-height: $WPTitleHeight
+	}
+
+	.datePickerCont {
+		height: 56px;
+		text-align: center;
+	}
+
+	md-datepicker {
+		background:$colWPHeader
+	}
+
+	.ms-webpart-titleText,
+	.md-headline {
+		color:$colMainBlue;
+		margin:auto 15px
+	}
+}
+
+.datePicker .md-datepicker-button {
+	padding-right:20px;
+
+	&:after {
+		color:$noir;
+		content:"Activités du ";
+		left:30px;
+		position: relative;
+		text-transform: none;
+		top:-24px;
+		width: 100px;
+	}
+
+	.md-datepicker-calendar-icon {
+		color:$noir
+	}
+}
+.md-datepicker-input {
+	@include font-custom1(bold,1.33em);
+
+	&-mask-opaque {
+		background:$colWPHeader!important;
+	}
+}
+
+.md-calendar-day-header {
+	background:$colWPHeader;
+
+	.md-default-theme & {
+		background:$colWPHeader
+	}
+}
+
+// Content
+// ================
+md-content {
+	/*height: 600px*/
+}
+
+.content {
+
+
+	> .layout-padding {
+		padding:0
+	}
+
+	md-list-item {
+		@include box-sizing(border-box);
+		padding: 12px;
+
+		strong {
+			@include font-custom1(500,1.166667em);
+		}
+
+		strong,
+		.calLoc {
+			color: $noir
+		}
+
+		.calDesc {
+			color:$lightBlack
+		}
+		.md-avatar {
+			color:$blanc;
+  			background-color: $midDarkGray
+		}
+		.md-avatar.Batiments {
+			background-color:$colBuilding;
+		}
+		.md-avatar.Corporation {
+			background-color:$colCorpo;
+		}
+		.md-avatar.Environnement {
+			background-color:$colEnvt;
+		}
+		.md-avatar.Evenements {
+			background-color:$colNews;
+		}
+		.md-avatar.Ressources {
+			background-color:$colRsc;
+		}
+	}
+}
+
+// Stycky
+
+._md-subheader-wrapper:not(.md-sticky-no-effect)[sticky-state=active] {
+    margin-top: 0;
+
+	strong {
+		@include font-custom1(normal,1.16em);
+	}
+
+}
+
+.md-subheader {
+	background-color:$colSticker;
+	color:rgba($noir,.87);
+	font-size: 1em;
+
+	._md-subheader-inner {
+		padding: 0
+	}
+
+	md-list-item{
+		&._md-no-proxy {//when scroll occurs
+			@include box-sizing(border-box);
+			padding: 12px;
+
+			.md-avatar {
+				@include border-radius(0);
+				background-color:$colRsc;
+				color:$blanc;
+				width: 40px;
+				height: 40px
+			}
+		}
+
+
+	}
+
+	.md-dense.layout-padding {
+		padding:0
+	}
+}
+
+// ====================================================================
+// ====================================================================
+// =========================== WEBPART ================================
+// ====================================================================
+// ====================================================================
+
+.eventHour {
+
+	&.day {
+
+	}
+}
+
+md-content md-list-item strong{
+	cursor:pointer;
+}
+
+md-sidenav, md-backdrop {
+		position: fixed !important;
+	}
+
+	md-sidenav{
+		width:400px;
+
+		md-toolbar .md-button
+		{
+			color: #013A81 !important;
+		}
+		
+		md-content img
+		{
+			width:100%
+		}
+
+		md-content .md-button
+		{
+			font-size:x-small;
+			line-height: 20px;
+		}
+	}

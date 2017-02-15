@@ -1,0 +1,63 @@
+﻿<div class="CorporateNews" ng-controller="CorporateNewsController as corporateNews" ng-cloak>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" ng-href="{{corporateNews.siteUrl}}/SiteAssets/Negotium/bower_components/angular-material/angular-material.min.css" />
+    <link rel="stylesheet" type="text/css" ng-href="{{corporateNews.siteUrl}}/SiteAssets/Negotium/Boost/CorporateNews/CorporateNews.css" />
+    <div>
+        <header class="md-primary">
+            <h2 class="md-toolbar-tools">
+                <span>Nouvelles de [...]</span>
+            </h2>
+        </header>
+    </div>
+
+    <md-content>
+        <md-list>
+            <md-list-item layout-align="center" class="md-3-line" ng-repeat="item in corporateNews.news | filter:corporateNews.Department:strict">
+                <img ng-src="{{item.Image}}" alt="{{item.Title}}" layout="column" flex="10" class="md-list-item-text pic" ng-click="corporateNews.OpenRightSideNav(item)">
+                <div class="md-list-item-text newsCont {{item.DepartmentLabel}}" layout="column">
+                    <strong>{{item.Title}}</strong>
+                    <div class="newsAbstract">{{item.ArticleAbstract}}</div>
+                    <div class="newsDate"><i class="material-icons">&#xE8AE;</i> [date]</div>
+                </div>
+                <md-divider ng-if="!$last"></md-divider>
+            </md-list-item>
+        </md-list>
+    </md-content>
+
+    <md-sidenav md-component-id="CorporateNews-SideNav" class="md-sidenav-right md-whiteframe-z2">
+        <md-toolbar>
+            <div layout="row" layout-align="space-between center">
+                <div>
+                    <h2 class="md-toolbar-tools ">Nouvelles [...] </h2>
+                </div>
+                <div>
+                    <md-button ng-click="corporateNews.CloseRightSideNav()" class="md-primary">X</md-button>
+                </div>
+            </div>
+        </md-toolbar>
+        <md-content layout-padding>
+            <div>
+                <div ng-cloak layout="row" class="">
+                    <div>
+                        <img ng-src="{{corporateNews.currentNew.Image}}" alt="">
+                        <strong>{{corporateNews.currentNew.Title}}</strong>
+                        <div class="newsAbstract ">{{corporateNews.currentNew.ArticleAbstract}}</div>
+                        <div class="newsDate "><i class="material-icons ">&#xE8AE;</i> [date]</div>
+                    </div>
+                </div>
+            </div>
+            <div layout="row">
+                <div flex="50" layout="column" layout-align="center center">
+                    <md-button class="md-raised md-primary" ng-click="corporateNews.FetchPreviousNew()">
+                        Nouvelle précédente
+                    </md-button>
+                </div>
+                <div flex="50" layout="column" layout-align="center center" ng-click="corporateNews.FetchNextNew()">
+                    <md-button class="md-raised md-primary">
+                        Nouvelle Suivante
+                    </md-button>
+                </div>
+            </div>
+        </md-content>
+    </md-sidenav>
+</div>

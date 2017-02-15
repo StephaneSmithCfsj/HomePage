@@ -1,0 +1,129 @@
+// CFSJ colors
+// ============================================================================
+
+// Basique
+// ----------------------------------------------------------------------------
+$blanc:#fff;
+$noir:#000;
+$midDarkGray:#666;
+$DarkGray:#4d4d4d;
+$lightBlack:#333;
+$no-color:transparent;
+
+// Themes departements
+// ----------------------------------------------------------------------------
+$colMainBlue:#013a81;
+$colCorpo:#6370a5;
+$colBuilding:#c3161c;
+$colEnvt:#858e11;
+$colRsc:#FDB813;
+$colNews:#1a75bc;
+
+$color-link:#013a81;
+
+// Chrome
+// ----------------------------------------------------------------------------
+$colWPHeader:#e6e6e6;
+$colWPBkg:#fbfbfb;
+$colWPFooter:#f2f2f2;
+$colSticker:#f2f2f2;
+$colBorder:rgba($noir,0.12);
+
+
+
+
+
+// SP VERSION
+// ====================================================================
+$Support-SharePoint-2013: true;
+
+$SPO365theme: false;
+$SPO365public: false;
+$SPO365themeApplied: lyon;
+
+$Cie: CFSJ;
+
+
+
+// CONTROLS
+// ====================================================================
+
+// CONTROLS | Site title
+// --------------------------------------------------------------------
+
+// True or false
+
+$Default-SP-siteTitle: false;
+
+
+// CONTROLS | Search
+// --------------------------------------------------------------------
+
+// true or false
+$Default-SP-search-icon: false;
+
+
+
+
+// CONTROLS | Navigation
+// --------------------------------------------------------------------
+
+$coreNavigationFont:"Roboto";
+
+
+// CONTROLS | Lists - Libraries Filters Columns drop down have the same
+// design as Lists/Libraries the toolbar drop downs
+// --------------------------------------------------------------------
+
+//Default value True
+$DropDownsToolBarAndColumnsEqual:"True";
+
+
+// WebPart Chromes
+// ====================================================================
+
+// WebPart Chromes | Global WP (pseudo) chrome - Applied to parent tag of the WP itself
+// border will include the WP itself
+// ====================================================================
+
+$WP-globalChrome-border-width: 0;
+$WPborder-color: $no-color;
+$WP-bkg: $no-color;
+$WPHeader-padding: 15px;
+$WP-padding: 0px;//Si bordure appliquée avec radius, mettre au minimum 1px de padding
+
+
+
+// WebPart Chromes | Default SP chromes
+// ====================================================================
+
+
+// Header
+$WPTitleHeight:52px;
+
+// Title
+$WP-Title-font: "Roboto";
+$WP-Title-border-width:0;
+$WP-Title-border-color:$no-color;
+
+// Body
+$WP-Body-font: "Arial";
+
+
+
+// LAYOUTS
+// ====================================================================
+
+$layoutGutter: 20px;
+
+// LAYOUTS | Main
+// --------------------------------------------------------------------
+
+$leftNavWidth:165px;
+
+$leftNavMarginLeft:0px;
+$leftNavMarginRight:20px;
+$leftMarginContentZone:$leftNavWidth + $leftNavMarginLeft + $leftNavMarginRight;
+$rightMarginContentZone:0px;
+
+$leftNavPadding:10px 10px 0 0px;

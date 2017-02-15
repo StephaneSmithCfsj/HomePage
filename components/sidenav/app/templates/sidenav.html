@@ -1,0 +1,29 @@
+<style>
+  ul.ul-side-nav li img {
+    width: 75px;
+    height: 75px
+  }
+</style>
+
+<ul class="ul-side-nav">
+  {{#with UserProfile as |profile|}}
+  <li class="user-picture">
+    <a href="{{profile.PersonalUrl}}">
+      {{#if profile.PictureUrl}}
+	     <img src="{{profile.PictureUrl}}" alt="{{profile.DisplayName}}">
+       {{else}}
+	     <img src="/_layouts/15/userphoto.aspx?size=S" alt="{{profile.DisplayName}}">
+       {{/if}}      
+      </a>
+  </li>
+  {{/with}}
+  {{#each SideNavItems}}
+  <li class="side-nav-item">
+    {{#if FSJDepartment}}
+    <a href="javascript:FilterDepartment('{{FSJDepartment.Label}}','{{FSJDepartment.TermGuid}}')"><img src="{{IconUrl}}" alt="{{Title}}"></a>
+    {{else}}
+    <a href="{{LinkUrl}}"><img src="{{IconUrl}}" alt="{{Title}}"></a>
+    {{/if}}
+  </li>
+  {{/each}}
+</ul>

@@ -1,0 +1,23 @@
+[
+  {
+    "Title": "Nulla nisl",
+    "Comments": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem.",
+    "ArticleAbstract": "Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "ForceDisplay": true,
+    "PublishingRollupImage": "<img src='/_layouts/15/images/image_bg002.jpg'/>"
+  },
+  {
+    "Title": "Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam",
+    "Comments": "Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum.",
+    "ArticleAbstract": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.",
+    "ForceDisplay": true,
+    "PublishingRollupImage": "<img src='/_layouts/15/images/image_bg003.jpg'/>"
+  },
+  {
+    "Title": "Curabitur at ipsum ac tellus semper interdum",
+    "Comments": "Fusce consequat. Nulla nisl. Nunc nisl.",
+    "ArticleAbstract": "In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue.",
+    "ForceDisplay": false,
+    "PublishingRollupImage": "<img src='/_layouts/15/images/image_bg004.jpg'/>"
+  }
+]

@@ -1,0 +1,109 @@
+/**
+ * CFSJ - June, 2016
+ * @author Negotium Technologies
+ * Carousel
+ */
+/* line 16, ../../masterpage/app/sass/partials/_placeholders.scss */
+.floatL {
+  float: left;
+}
+
+/* line 40, sass/CorporateNews.scss */
+md-toolbar.md-default-theme:not(.md-menu-toolbar),
+md-toolbar:not(.md-menu-toolbar) {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 52px;
+  min-height: 52px;
+  background-color: #e6e6e6;
+  font-size: 1em;
+}
+
+/* line 47, sass/CorporateNews.scss */
+h2.md-toolbar-tools {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 52px;
+  min-height: 52px;
+  font: 300 2.16em "Roboto", Arial, sans-serif;
+  text-shadow: none;
+  color: #013a81;
+  padding-left: 15px;
+}
+
+/* line 58, sass/CorporateNews.scss */
+.CorporateNews md-list {
+  padding: 0;
+}
+/* line 62, sass/CorporateNews.scss */
+.CorporateNews md-list-item {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 12px;
+}
+/* line 66, sass/CorporateNews.scss */
+.CorporateNews md-list-item.md-3-line, .CorporateNews md-list-item.md-3-line::before,
+.CorporateNews md-list-item .md-3-line > ._md-no-style::before {
+  min-height: 100%;
+}
+/* line 73, sass/CorporateNews.scss */
+.CorporateNews md-list-item .md-list-item-text.newsCont {
+  margin: 0;
+}
+/* line 77, sass/CorporateNews.scss */
+.CorporateNews md-list-item .md-list-item-text.pic {
+  width: 72px;
+  max-height: 50px;
+  margin: 0 16px 0 0;
+  padding: 2px;
+}
+/* line 84, sass/CorporateNews.scss */
+.CorporateNews md-list-item strong {
+  font: 500 1.16667em "Roboto", Arial, sans-serif;
+  text-shadow: none;
+}
+/* line 88, sass/CorporateNews.scss */
+.CorporateNews md-list-item strong,
+.CorporateNews md-list-item .newsDate {
+  color: #000;
+}
+/* line 92, sass/CorporateNews.scss */
+.CorporateNews md-list-item strong i,
+.CorporateNews md-list-item .newsDate i {
+  font-size: 1.1666667em;
+  font-weight: 600;
+  position: relative;
+  top: 3px;
+}
+/* line 100, sass/CorporateNews.scss */
+.CorporateNews md-list-item .newsAbstract {
+  color: #333;
+}
+
+/*  Right slider (md-sidenav) */
+
+.CorporateNews md-sidenav{
+	width:400px;
+}
+
+.CorporateNews md-sidenav, md-backdrop {
+position: fixed !important;
+}
+
+.CorporateNews md-sidenav md-toolbar .md-button
+{
+	color: #013A81 !important;
+}
+.CorporateNews md-sidenav md-content img
+{
+	width:100%
+}
+
+.CorporateNews md-sidenav md-content .md-button
+{
+	font-size:x-small;
+	line-height: 20px;
+}
